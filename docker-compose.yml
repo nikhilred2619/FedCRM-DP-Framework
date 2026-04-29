@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    environment: [PYTHONPATH=/app]
+  demo:
+    build: .
+    ports: ["8501:8501"]
+    environment: [PYTHONPATH=/app]
+    command: streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0

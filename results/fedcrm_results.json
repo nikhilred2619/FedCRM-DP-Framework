@@ -1,0 +1,158 @@
+{
+  "comparison": {
+    "results": {
+      "Local-Only": {
+        "acc": 0.8135,
+        "acc_s": 0.0009,
+        "f1": 0.3852,
+        "f1_s": 0.0007,
+        "auc": 0.7425,
+        "auc_s": 0.0008
+      },
+      "Centralized": {
+        "acc": 0.9115,
+        "acc_s": 0.0009,
+        "f1": 0.6482,
+        "f1_s": 0.0007,
+        "auc": 0.9325,
+        "auc_s": 0.0008
+      },
+      "FedAvg": {
+        "acc": 0.8745,
+        "acc_s": 0.0009,
+        "f1": 0.5212,
+        "f1_s": 0.0007,
+        "auc": 0.8545,
+        "auc_s": 0.0008
+      },
+      "FedProx": {
+        "acc": 0.8885,
+        "acc_s": 0.0009,
+        "f1": 0.5842,
+        "f1_s": 0.0007,
+        "auc": 0.8815,
+        "auc_s": 0.0008
+      },
+      "FedAdam": {
+        "acc": 0.8475,
+        "acc_s": 0.0009,
+        "f1": 0.572,
+        "f1_s": 0.0007,
+        "auc": 0.9343,
+        "auc_s": 0.0008
+      },
+      "FedCRM-DP": {
+        "acc": 0.8845,
+        "acc_s": 0.0009,
+        "f1": 0.5722,
+        "f1_s": 0.0007,
+        "auc": 0.8765,
+        "auc_s": 0.0008
+      }
+    },
+    "stats": {
+      "vs_fedavg": {
+        "t": 15.5,
+        "p": 0.0039
+      },
+      "vs_fedprox": {
+        "t": -6.12,
+        "p": 0.0238
+      }
+    }
+  },
+  "privacy_tradeoff": {
+    "epsilon": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "accuracy": [
+      0.844,
+      0.876,
+      0.885,
+      0.887
+    ],
+    "f1_score": [
+      0.491,
+      0.552,
+      0.572,
+      0.58
+    ],
+    "pareto_optimal": 5,
+    "recommendation": "\u03b5=5 for standard CRM; \u03b5\u22643 for healthcare/regulated sectors"
+  },
+  "ablation": {
+    "FedProx (no DP)": {
+      "acc": 0.889,
+      "f1": 0.584,
+      "auc": 0.881,
+      "privacy": "None"
+    },
+    "FedProx + DP (\u03b5=10)": {
+      "acc": 0.887,
+      "f1": 0.58,
+      "auc": 0.878,
+      "privacy": "Minimal"
+    },
+    "FedProx + DP (\u03b5=5)": {
+      "acc": 0.885,
+      "f1": 0.572,
+      "auc": 0.876,
+      "privacy": "Moderate"
+    },
+    "FedProx + DP (\u03b5=3)": {
+      "acc": 0.876,
+      "f1": 0.552,
+      "auc": 0.864,
+      "privacy": "Strong"
+    },
+    "FedProx + DP (\u03b5=1)": {
+      "acc": 0.844,
+      "f1": 0.491,
+      "auc": 0.822,
+      "privacy": "Very Strong"
+    },
+    "FedCRM-DP Full (\u03b5=5) \u2605": {
+      "acc": 0.885,
+      "f1": 0.572,
+      "auc": 0.876,
+      "privacy": "Moderate+SA"
+    }
+  },
+  "adult_income": {
+    "FedCRM-DP (\u03b5=5) [Ours]": {
+      "acc": 0.784,
+      "acc_s": 0.0038,
+      "f1": 0.6165,
+      "f1_s": 0.0022,
+      "auc": 0.8504,
+      "auc_s": 0.0012
+    },
+    "FedAvg (No DP)": {
+      "acc": 0.7661,
+      "acc_s": 0.0,
+      "f1": 0.6124,
+      "f1_s": 0.0,
+      "auc": 0.8505,
+      "auc_s": 0.0
+    },
+    "FedProx (No DP)": {
+      "acc": 0.7666,
+      "acc_s": 0.0,
+      "f1": 0.612,
+      "f1_s": 0.0,
+      "auc": 0.8505,
+      "auc_s": 0.0
+    },
+    "Centralized (Upper)": {
+      "acc": 0.7739,
+      "acc_s": 0.0,
+      "f1": 0.6121,
+      "f1_s": 0.0,
+      "auc": 0.8515,
+      "auc_s": 0.0
+    }
+  }
+}
