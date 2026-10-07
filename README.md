@@ -8,7 +8,7 @@
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-3776ab?style=for-the-badge&logo=python)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-[![Paper: IEEE Access](https://img.shields.io/badge/Paper-IEEE_Access-blue?style=for-the-badge)](https://orcid.org/0009-0006-7699-3928)
+[![Research: Manuscript](https://img.shields.io/badge/Research-Manuscript-blue?style=for-the-badge)](https://orcid.org/0009-0006-7699-3928)
 
 **Author:** Nikhil Reddy Donapati · Agentforce AI Specialist · Texas, USA
 
@@ -30,7 +30,7 @@ FedCRM-DP Answer:    Federated learning  → collaborative AI, no data sharing
 
 ---
 
-## Validated Performance (UCI Bank Marketing, 100 rounds, MLP)
+## Experimental Results (UCI Bank Marketing, 100 rounds, MLP)
 
 ```
 TABLE I: Comparative Performance — All Six Strategies
@@ -103,7 +103,7 @@ FedCRM-DP: Four-Layer Federated Stack
 ## Quick Start
 
 ```bash
-git clone https://github.com/nikhildonapati/fedcrm-dp.git
+git clone https://github.com/nikhilred2619/FedCRM-DP-Framework.git
 cd fedcrm-dp
 pip install -r requirements.txt
 
@@ -199,9 +199,8 @@ fedcrm-dp/
   title   = {FedCRM-DP: A Privacy-Preserving Federated Learning Framework 
              for Secure Cross-Organization CRM Intelligence},
   author  = {Donapati, Nikhil Reddy},
-  journal = {IEEE Access},
   year    = {2025},
-  note    = {Under Review},
+  note    = {Research manuscript},
   url     = {https://github.com/nikhildonapati/fedcrm-dp}
 }
 ```
